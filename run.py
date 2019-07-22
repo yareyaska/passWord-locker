@@ -19,8 +19,8 @@ def randomString(stringLength=10):
     letters = string.ascii_lowercase
     return ''.join(random.choice(letters) for i in range(stringLength))
 
-def del_user(user):
-	user.delete_user()   
+def display_passwords(user):
+	user.display_passwords()   
 
 def createCred(name, Password):
     new_user = User(name, Password)
@@ -106,13 +106,7 @@ def main():
                     	password = randomString(8)
                     	save_passwords(create_password(name,password))
 
-                    elif short_code == '4':
-                    	print("Enter name of account to be deleted")
-                    	deli_user = input()
-                    	if display_passwords(deli_user):
-                    		search_account = find_user(deli_user)
-                    		del_user(search_account)
-                    		print(f"{display_passwords} account credentials have been successfully deleted")	
+
 
                     
                     elif short_code == "5":
