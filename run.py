@@ -1,4 +1,4 @@
-from locker import Password
+from locker import Password, User
 import random
 import string
 
@@ -22,6 +22,16 @@ def randomString(stringLength=10):
 def del_user(user):
 	user.delete_user()   
 
+def createCred(name, Password):
+    new_user = User(name, Password)
+    return new_user
+def saveCredentials(details):
+    details.saveUser()
+def verify_user(first_name,password):
+    
+    checking_user = User.check_user(first_name,password)
+    return checking_user    
+
 		 
 
 
@@ -31,7 +41,35 @@ def main():
 	user_name = input()
 	print(f"Hello {user_name}. what would you like to do?")
 	print('\n')
-	while True:
+
+while True:
+        print("Hello Welcome to your password locker")
+        print("Use either 1,2,exit to navigate. \n 1--Create a password lock account  \n 2--Log in \n exit--exit account")
+        code = input(" Enter your choice ").lower()
+        if code == "1":
+                print("Enter Username")
+                name = input()
+                print("Enter referred password")
+                password = input()
+                saveCredentials(createCred(name,password))
+                print(f"{name}, your credentials have been saved successfully")
+
+        elif code == "exit":
+            print("thank u and see u again.......")
+            break        
+        if code == "2":
+            print("Enter user Name")
+            name = input()
+            print("Enter password")
+            passw = input()
+            user_exists = verify_user(name,passw)
+            if user_exists == name:
+                print(" ")
+                print(f'Welcome {name}. Please choose an option to continue.')
+                print(' ')
+
+
+                while True:
                     print("Use these short codes : 1- create a new account, 2- check existing users, 3- Generate a password, 4- delete an account, 5-exit ")
 
 
