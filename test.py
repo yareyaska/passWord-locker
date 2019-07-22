@@ -4,7 +4,7 @@ from locker import Password
 class Testlocker(unittest.TestCase):
 	"""docstring for ClassName"""
 	def setUp(self):
-	      	self.new_person = Password("yu","234"
+	      	self.new_person = Password("yu","234")
 #testing for user name and password
 	def test_init(self):
 	     	self.assertEqual(self.new_person.username,"yu")
