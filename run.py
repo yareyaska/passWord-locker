@@ -30,7 +30,7 @@ def saveCredentials(details):
 def verify_user(first_name,password):
     
     checking_user = User.check_user(first_name,password)
-    return checking_user    
+    return checking_use    
 
 		 
 
