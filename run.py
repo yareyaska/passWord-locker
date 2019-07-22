@@ -8,7 +8,7 @@ def create_password(name,password):
 	    return new_password
 
 
-def save_passwords(passwords):
+def save_passwords(passwords)
 	 passwords.savePassword()
 
 def display_passwords():
