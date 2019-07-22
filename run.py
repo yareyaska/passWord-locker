@@ -37,12 +37,11 @@ def verify_user(first_name,password):
 
 
 def main():
-	print("Hello Welcome to your password locker. What is your name?")
-	user_name = input()
-	print(f"Hello {user_name}. what would you like to do?")
-	print('\n')
+	
 
-while True:
+ while True:
+        
+
         print("Hello Welcome to your password locker")
         print("Use either 1,2,exit to navigate. \n 1--Create a password lock account  \n 2--Log in \n exit--exit account")
         code = input(" Enter your choice ").lower()
