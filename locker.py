@@ -37,7 +37,7 @@ class User:
         for user in User.user_list:
             if (user.name == name and user.Password == Password):
                 current_user = user.name
-                return current_use
+                return current_user
 
 
     
