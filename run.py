@@ -9,7 +9,7 @@ def create_password(name,password):
 
 
 def save_passwords(passwords):
-	 passwords.savePassword()
+	 passwords.savePassword(
 
 def display_passwords():
 	 return Password.display_passwords()
